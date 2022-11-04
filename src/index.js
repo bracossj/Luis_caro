@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const userRoutes = require("./routes/user");
-const tweetRoutes = require("./routes/tweet");
+const tuitRoutes = require("./routes/tuit");
 const followerRoutes = require("./routes/follower");
 const likeRoutes = require("./routes/like");
 
@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(userRoutes);
-app.use(tweetRoutes);
+app.use(tuitRoutes);
 app.use(followerRoutes);
 app.use(likeRoutes);
 

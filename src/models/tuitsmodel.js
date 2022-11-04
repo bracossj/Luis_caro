@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const tweetSchema = mongoose.Schema({
+const tuitSchema = mongoose.Schema({
     text: {
         type: String,
         required: true
@@ -21,4 +21,4 @@ const tweetSchema = mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('Tweet', tweetSchema);
+module.exports = mongoose.model('Tuit', tuitSchema);

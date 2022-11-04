@@ -1,4 +1,7 @@
+
+
 //USUARIOS
+
 
 // Crear usuario
 ###
@@ -6,26 +9,26 @@ POST http://localhost:3000/crearusuario  HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "@angelgay",
-    "description": "",
-    "name": "angelito  ",
-    "email": "xdxdxdxdxd@gmail.com"
+    "username": "@santipajaslocas",
+    "description": "juniormanda",
+    "name": "soysanty",
+    "email": "fsantyteo@gmail.com"
 }
 
 
-//VER usuarios
+// ver todos los usuarios
 ###
 GET http://localhost:3000/usuarios HTTP/1.1
 
 
-//VER un usuario especifico
+// ver un usuario especifico
 ###
-GET http://localhost:3000/usuario/636436b7380794beef4f092f HTTP/1.1
+GET http://localhost:3000/usuario/6364989a682b1931e13b9e15 HTTP/1.1
 
 
-//Actualizar usuario
+// actualizar un usuario
 ###
-PUT http://localhost:3000/actusuario/ HTTP/1.1
+PUT http://localhost:3000/actusuario/6364989a682b1931e13b9e15 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -36,6 +39,45 @@ Content-Type: application/json
 }
 
 
-//Eliminar Usuario
+// eliminar  un usuario
 ###
 DELETE http://localhost:3000/eliminarusuario/636436b7380794beef4f092f HTTP/1.1
+
+
+//TUITS
+
+
+// tuitear
+###
+POST http://localhost:3000/tuitear  HTTP/1.1
+Content-Type: application/json
+
+{
+    "text": "prueba 10",
+    "valecita": "6364990d682b1931e13b9e1c"
+}
+
+
+// ver todos los tuits
+###
+GET http://localhost:3000/tuits HTTP/1.1
+
+
+// ver todos los tuits de un usuario
+###
+GET http://localhost:3000/tuitsde/6364990d682b1931e13b9e1c HTTP/1.1
+
+
+// editar un tuit
+###
+PUT http://localhost:3000/edittuit/6364a725db698155c265317b HTTP/1.1
+Content-Type: application/json
+
+{
+    "text": "salsita y berbena"
+}
+
+
+// eliminar  un tuit
+###
+DELETE http://localhost:3000/borrartuit/6364a725db698155c265317b HTTP/1.1

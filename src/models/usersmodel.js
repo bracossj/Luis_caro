@@ -19,7 +19,7 @@ const userSchema = mongoose.Schema({
         require: true,
         unique: true
     },
-    tweets: [{
+    tuits: [{
         text: {
             type: String,
             required: false
@@ -34,7 +34,7 @@ const userSchema = mongoose.Schema({
         }
     }],
     megustan: [{
-        txt: {
+        text: {
             type: String,
             required: false
         },
