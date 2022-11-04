@@ -70,7 +70,7 @@ GET http://localhost:3000/tuitsde/6364990d682b1931e13b9e1c HTTP/1.1
 
 // editar un tuit
 ###
-PUT http://localhost:3000/edittuit/6364a725db698155c265317b HTTP/1.1
+PUT http://localhost:3000/edittuit/6364a94fc2ae9828472f74c1 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -80,4 +80,36 @@ Content-Type: application/json
 
 // eliminar  un tuit
 ###
-DELETE http://localhost:3000/borrartuit/6364a725db698155c265317b HTTP/1.1
+DELETE http://localhost:3000/borrartuit/6364a952c2ae9828472f74c7 HTTP/1.1
+
+
+// Seguir
+###
+POST http://localhost:3000/seguir  HTTP/1.1
+Content-Type: application/json
+
+{
+    "seguido": "6364989a682b1931e13b9e15",
+    "seguidor": "63649933682b1931e13b9e1e"
+}
+
+
+// seguidores de un usuario
+###
+GET http://localhost:3000/seguidores/6364989a682b1931e13b9e15 HTTP/1.1
+
+
+// seguidos de un usuario
+###
+GET http://localhost:3000/seguidos/63649933682b1931e13b9e1e HTTP/1.1
+
+
+// dejar de seguir
+###
+DELETE http://localhost:3000/dejardeseguir HTTP/1.1
+Content-Type: application/json
+
+{
+    "seguido": "6364989a682b1931e13b9e15",
+    "seguidor": "63649933682b1931e13b9e1e"
+}

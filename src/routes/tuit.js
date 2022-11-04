@@ -1,7 +1,7 @@
 const express = require("express");
-const router = express.Router();
 const TuitSchema = require("../models/tuitsmodel");
 const UserSchema = require("../models/usersmodel");
+const router = express.Router();
 
 // crear un tuit
 
@@ -63,7 +63,6 @@ router.put("/edittuit/:id", async (req, res) => {
         if (aux == null || aux == undefined) {
             res.json({ message: "este tuit no existe" });
         } else {
-            const user = await UserSchema.find(aux.valecita);
             await UserSchema
                 .updateOne({ _id: aux.valecita }, { $set: { 'tuits': { _id: id, text: text, date: aux.date, megustan: aux.likes } } });
             await TuitSchema
