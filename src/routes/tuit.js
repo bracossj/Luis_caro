@@ -64,7 +64,7 @@ router.put("/edittuit/:id", async (req, res) => {
             res.json({ message: "este tuit no existe" });
         } else {
             await UserSchema
-                .updateOne({ _id: aux.valecita }, { $set: { 'tuits': { _id: id, text: text, date: aux.date, megustan: aux.likes } } });
+                .updateOne({ '_id': aux.valecita, 'tuits._id': aux._id }, { $set: { 'tuits.$.text': text } });
             await TuitSchema
                 .updateOne({ _id: id }, { $set: { text: text } })
                 .then((data) => res.json(data))
