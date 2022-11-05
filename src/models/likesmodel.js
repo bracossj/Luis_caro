@@ -7,7 +7,7 @@ const likeSchema = mongoose.Schema({
         ref: 'User',
         required: true
     },
-    tuits: {
+    tuit: {
         type: mongoose.Types.ObjectId,
         ref: 'Tuit',
         required: true

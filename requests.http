@@ -113,3 +113,14 @@ Content-Type: application/json
     "seguido": "6364989a682b1931e13b9e15",
     "seguidor": "63649933682b1931e13b9e1e"
 }
+
+
+// dar like
+###
+POST http://localhost:3000/darlike  HTTP/1.1
+Content-Type: application/json
+
+{
+    "like": "63649933682b1931e13b9e1e",
+    "tuit": "6364a954c2ae9828472f74ce"
+}
